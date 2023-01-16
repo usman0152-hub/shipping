@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+
+    <record id="manifiest_model_form" model="ir.ui.view">
+    <field name="name">manifiest.model.form</field>
+    <field name="model">manifiest.model</field>
+    <field name="arch" type="xml">
+
+<form string="Tests" >
+    <sheet>
+
+        <group>
+  <group id="header_left_group">
+      <field name="tran" />
+      <field name="doc" />
+      <field name="year" />
+      <field name="doc" />
+
+
+
+
+
+  </group>
+        </group>
+
+
+    </sheet>
+</form>
+            </field>
+            </record>
+
+
+        <record id="manifiest_model_action" model="ir.actions.act_window">
+    <field name="name">Manifiest Detail</field>
+    <field name="res_model">manifiest.model</field>
+    <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create your first Survey Form!
+        </p>
+        </field>
+</record>
+
+
+
+     <menuitem id="manifiest_model_menu_first_level_menu"
+               name = "Manifiest"
+               />
+
+    <menuitem id="manifiest_model_menu_action"
+               name = "manifiest Detail"
+               parent ="manifiest_model_menu_first_level_menu"
+              sequence = '1'
+             action="manifiest_model_action"/>
+
+
+
+</odoo>
+

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="survey_model_tree" model="ir.ui.view">
+    <field name="name">survey.model.tree</field>
+    <field name="model">survey.model</field>
+    <field name="arch" type="xml">
+        <tree string ="Testing" >
+
+        </tree>
+    </field>
+    </record>
+
+
+    <record id="survey_model_form" model="ir.ui.view">
+    <field name="name">survey.model.form</field>
+    <field name="model">survey.model</field>
+    <field name="arch" type="xml">
+
+<form string="Tests" >
+    <sheet>
+
+
+<group>
+  <group id="header_left_group">
+<field name="job" />
+      <field name="nature" />
+      <field name="console_of" />
+      <field name="job_date" />
+      <field name="job_type" />
+      <field name="cost_center" />
+      <field name="console_id" />
+      <field name="job_kind" />
+      <field name="customer_ref" />
+      <field name="job_status" />
+      <field name="shipt_status" />
+      <field name="shipt_date" />
+      <field name="type_of_bl" />
+      <field name="freight_type" />
+      <field name="nomination" />
+      <field name="file" />
+      <field name="tax_distribution" />
+      <field name="hbl_number" />
+      <field name="hbl_date" />
+      <field name="mbl_number" />
+      <field name="mbl_date" />
+
+
+
+
+  </group>
+
+<group id="header_right_group">
+    <field name="total_container" />
+      <field name="tariff_applied" />
+      <field name="client" />
+      <field name="consignee" />
+      <field name="shipper" />
+      <field name="commodity" />
+      <field name="port_of_loading" />
+      <field name="port_of_discharge" />
+      <field name="final_destination" />
+      <field name="custom_clearance" />
+      <field name="transportation" />
+      <field name="forwarder_coloader" />
+      <field name="sales_representative" />
+      <field name="sline_carrier" />
+      <field name="local_vendor" />
+      <field name="overseas_agent" />
+      <field name="vessel" />
+      <field name="voyage" />
+      <field name="etd" />
+      <field name="eta" />
+      <field name="cbkg_ed" />
+      <field name="weight" />
+      <field name="volume" />
+      <field name="container" />
+      <field name="teu" />
+      <field name="pcs" />
+      <field name="quotation" />
+      <field name="tracking_notes" />
+
+
+
+
+</group>
+</group>
+
+
+    </sheet>
+</form>
+            </field>
+            </record>
+
+
+        <record id="survey_model_action" model="ir.actions.act_window">
+    <field name="name">Form Detail</field>
+    <field name="res_model">survey.model</field>
+    <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create your first Survey Form!
+        </p>
+        </field>
+</record>
+
+
+ <menuitem id="survey_model_menu_root"
+             name = "Survey Form">
+             </menuitem>
+     <menuitem id="survey_model_menu_first_level_menu"
+               name = "Form"
+               parent ="survey_model_menu_root"/>
+
+    <menuitem id="survey_model_menu_action"
+               name = "Form Detail"
+               parent ="survey_model_menu_first_level_menu"
+              sequence = '1'
+             action="survey_model_action"/>
+
+
+
+</odoo>
+

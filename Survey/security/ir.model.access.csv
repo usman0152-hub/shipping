@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access.survey.model,access_survey_model,Survey.model_survey_model,,1,1,1,1
+access.manifiest.model,access_manifiest_model,Survey.model_manifiest_model,,1,1,1,1
